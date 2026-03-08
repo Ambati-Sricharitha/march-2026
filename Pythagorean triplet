@@ -1,0 +1,13 @@
+class Solution:
+	def pythagoreanTriplet(self, arr):
+    	# code here
+    	n=len(arr)
+    	arr=[x*x for x in arr]
+    	#Put results of array in a set
+    	s=set(arr)
+    	#Check pairs
+    	for i in range(n):
+    	    for j in range(i+1,n):
+    	        if arr[i]+arr[j] in s:
+    	            return True
+    	return False
